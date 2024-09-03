@@ -14,7 +14,7 @@ public enum BundleProperty: String {
     case buildVersion = "CFBundleVersion"
 }
 
-extension Bundle {
+public extension Bundle {
     var displayName: String? {
         return object(forInfoDictionaryKey: BundleProperty.displayName.rawValue) as? String
     }
