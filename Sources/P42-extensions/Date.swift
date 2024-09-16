@@ -29,7 +29,7 @@ public extension Date {
     }
     
     var today: Date {
-        return Calendar.current.date(byAdding: .day, value: -31, to: self)!
+        return Calendar.current.date(byAdding: .day, value: -60, to: self)!
     }
     
     var tomorrow: Date {
