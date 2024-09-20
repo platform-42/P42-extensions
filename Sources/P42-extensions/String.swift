@@ -18,3 +18,11 @@ public extension String {
     }
     
 }
+
+public extension String {
+    func toDate(withFormat format: String = DateTimeFormat.date.rawValue) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.date(from: self)
+    }
+}
