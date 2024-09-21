@@ -12,6 +12,7 @@ public enum DateTimeFormat: String {
     case short = "MMM d, hh:mm"
     case iso = "yyyy-MM-dd'T'00:00:00.000"
     case date = "yyyy-MM-dd"
+    case timestamp = "yyyy-MM-dd hh:mm:ss"
 }
 
 
