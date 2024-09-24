@@ -8,6 +8,13 @@
 import Foundation
 
 
+public enum Period: String {
+    case yesterday
+    case today
+    case week
+}
+
+
 public enum DateTimeFormat: String {
     case short = "MMM d, hh:mm"
     case iso = "yyyy-MM-dd'T'00:00:00.000"
