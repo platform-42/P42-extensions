@@ -24,6 +24,7 @@ public enum DateTimeFormat: String {
 
 
 public extension Date {
+    
     func toString(_ format: DateTimeFormat) -> String {
         let dateformat = DateFormatter()
         dateformat.dateFormat = format.rawValue

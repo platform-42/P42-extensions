@@ -10,6 +10,7 @@ import SwiftUI
 
 @available(iOS 13.0, *)
 public extension Image {
+    
     @available(iOS 13.0.0, *)
     func portrait(width: CGFloat, height: CGFloat) -> some View {
         self

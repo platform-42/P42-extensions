@@ -9,6 +9,7 @@ import Foundation
 
 
 public extension String {
+    
     func removePostfix(_ postfix: String) -> String {
         if self.hasSuffix(postfix) {
             let endIndex = self.index(self.endIndex, offsetBy: -postfix.count)
@@ -20,6 +21,7 @@ public extension String {
 }
 
 public extension String {
+    
     func toDate(withFormat format: String = DateTimeFormat.date.rawValue) -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format

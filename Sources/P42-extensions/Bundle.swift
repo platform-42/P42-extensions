@@ -15,6 +15,7 @@ public enum BundleProperty: String {
 }
 
 public extension Bundle {
+    
     var displayName: String? {
         return object(forInfoDictionaryKey: BundleProperty.displayName.rawValue) as? String
     }
