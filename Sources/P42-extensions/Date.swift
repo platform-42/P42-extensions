@@ -20,7 +20,7 @@ public enum DateTimeFormat: String {
     case iso = "yyyy-MM-dd'T'00:00:00.000"
     case date = "yyyy-MM-dd"
     case timestamp = "yyyy-MM-dd hh:mm:ss"
-    case datePlain = "yyyMMdd"
+    case datePlain = "yyyyMMdd"
 }
 
 
