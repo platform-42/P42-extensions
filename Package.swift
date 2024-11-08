@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "P42-extensions",
     platforms: [
-        .iOS(.v14), 
+        .iOS(.v16),
         .watchOS(.v6)
     ],
     products: [
