@@ -9,7 +9,9 @@ import Foundation
 import SwiftUI
 import UIKit
 
-extension View {
+
+public extension View {
+    
     @available(iOS 14, *)
     func navigationBarTitleTextColor(_ color: Color) -> some View {
         let uiColor = UIColor(color)
@@ -17,4 +19,5 @@ extension View {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: uiColor ]
         return self
     }
+    
 }
