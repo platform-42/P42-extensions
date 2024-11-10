@@ -54,6 +54,14 @@ public extension Date {
         return Calendar.current.date(byAdding: .day, value: -7, to: self)!
     }
     
+    var oneWeekAgo: Date {
+        return Calendar.current.date(byAdding: .day, value: -7, to: self)!
+    }
+    
+    var twoWeeksAgo: Date {
+        return Calendar.current.date(byAdding: .day, value: -14, to: self)!
+    }
+    
     var nextMonth: Date {
         return Calendar.current.date(byAdding: .day, value: 30, to: self)!
     }
