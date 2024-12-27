@@ -12,6 +12,7 @@ public enum BundleProperty: String {
     case displayName = "CFBundleDisplayName"
     case appVersion = "CFBundleShortVersionString"
     case buildVersion = "CFBundleVersion"
+    case gidClientID = "GIDClientID"
 }
 
 public extension Bundle {
@@ -26,5 +27,9 @@ public extension Bundle {
     
     var buildVersion: String? {
         return object(forInfoDictionaryKey: BundleProperty.buildVersion.rawValue) as? String
+    }
+    
+    var gidClientID: String? {
+        return object(forInfoDictionaryKey: BundleProperty.gidClientID.rawValue) as? String
     }
 }
