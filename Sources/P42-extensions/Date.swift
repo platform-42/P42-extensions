@@ -16,10 +16,10 @@ public enum Period: String {
 
 
 public enum DateTimeFormat: String {
-    case short = "MMM d, hh:mm"
+    case short = "MMM d, HH:mm"
     case iso = "yyyy-MM-dd'T'00:00:00.000"
     case date = "yyyy-MM-dd"
-    case timestamp = "yyyy-MM-dd hh:mm:ss"
+    case timestamp = "yyyy-MM-dd HH:mm:ss"
     case datePlain = "yyyyMMdd"
 }
 
