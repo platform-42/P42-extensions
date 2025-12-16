@@ -16,6 +16,7 @@ public enum Period: String {
 
 
 public enum DateTimeFormat: String {
+    case xs_short = "HH:mm"
     case short = "MMM d, HH:mm"
     case iso = "yyyy-MM-dd'T'00:00:00.000"
     case date = "yyyy-MM-dd"
