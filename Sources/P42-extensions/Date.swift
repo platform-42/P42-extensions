@@ -12,6 +12,8 @@ public enum Period: String {
     case yesterday
     case today
     case week
+    case monty
+    case year
 }
 
 
