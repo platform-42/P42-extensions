@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "P42-extensions",
+    name: "P42Extensions",
     platforms: [
         .iOS(.v17),
         .watchOS(.v10),
@@ -15,9 +15,6 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "P42Extensions"),
-        .testTarget(
-            name: "P42ExtensionsTests",
-            dependencies: ["P42Extensions"]),
+            name: "P42Extensions")
     ]
 )
