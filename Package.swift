@@ -10,14 +10,14 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "P42-extensions",
-            targets: ["P42-extensions"]),
+            name: "P42Extensions",
+            targets: ["P42Extensions"]),
     ],
     targets: [
         .target(
-            name: "P42-extensions"),
+            name: "P42Extensions"),
         .testTarget(
-            name: "P42-extensionsTests",
-            dependencies: ["P42-extensions"]),
+            name: "P42ExtensionsTests",
+            dependencies: ["P42Extensions"]),
     ]
 )
