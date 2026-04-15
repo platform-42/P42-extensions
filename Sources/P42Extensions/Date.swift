@@ -29,13 +29,17 @@ public enum DateTimeFormat: String {
 
 public extension Date {
     
-    func toString(_ format: DateTimeFormat) -> String {
+    func toString(
+        _ format: DateTimeFormat
+    ) -> String {
         let dateformat = DateFormatter()
         dateformat.dateFormat = format.rawValue
         return dateformat.string(from: self)
     }
     
-    static func ISOStringFromDate(_ date: Date) -> String {
+    static func ISOStringFromDate(
+        _ date: Date
+    ) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = DateTimeFormat.iso.rawValue
         return dateFormatter.string(from: date).appending("Z")
