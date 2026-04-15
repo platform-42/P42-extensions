@@ -14,6 +14,7 @@ enum BundleProperty {
     static let buildVersion = "CFBundleVersion"
 }
 
+
 enum GoogleBundleProperty {
     static let gidClientID = "GIDClientID"
 }
@@ -47,7 +48,6 @@ public extension Bundle {
 
 public extension Bundle {
 
-    /// The Google Sign-In client ID (GIDClientID).
     var gidClientID: String? {
         object(forInfoDictionaryKey: GoogleBundleProperty.gidClientID) as? String
     }
