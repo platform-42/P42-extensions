@@ -8,28 +8,47 @@
 import Foundation
 
 
-public enum BundleProperty: String {
-    case displayName = "CFBundleDisplayName"
-    case appVersion = "CFBundleShortVersionString"
-    case buildVersion = "CFBundleVersion"
-    case gidClientID = "GIDClientID"
+enum BundleProperty {
+    static let displayName  = "CFBundleDisplayName"
+    static let appVersion   = "CFBundleShortVersionString"
+    static let buildVersion = "CFBundleVersion"
 }
+
+enum GoogleBundleProperty {
+    static let gidClientID = "GIDClientID"
+}
+
 
 public extension Bundle {
     
     var displayName: String? {
-        return object(forInfoDictionaryKey: BundleProperty.displayName.rawValue) as? String
+        return object(forInfoDictionaryKey: BundleProperty.displayName) as? String
     }
     
     var appVersion: String? {
-        return object(forInfoDictionaryKey: BundleProperty.appVersion.rawValue) as? String
+        return object(forInfoDictionaryKey: BundleProperty.appVersion) as? String
     }
     
     var buildVersion: String? {
-        return object(forInfoDictionaryKey: BundleProperty.buildVersion.rawValue) as? String
+        return object(forInfoDictionaryKey: BundleProperty.buildVersion) as? String
     }
     
+    var fullVersion: String? {
+        switch (appVersion, buildVersion) {
+        case let (version?, build?): return "\(version) (\(build))"
+        case let (version?, nil):    return version
+        case let (nil, build?):      return build
+        case (nil, nil):             return nil
+        }
+    }
+    
+}
+
+
+public extension Bundle {
+
+    /// The Google Sign-In client ID (GIDClientID).
     var gidClientID: String? {
-        return object(forInfoDictionaryKey: BundleProperty.gidClientID.rawValue) as? String
+        object(forInfoDictionaryKey: GoogleBundleProperty.gidClientID) as? String
     }
 }
